@@ -34,7 +34,7 @@ function App() {
     try {
       setLoading(true);
       const parsedJson = validateJson(inputJson);
-      const apiResponse = await axios.post("http://localhost:8080/process", parsedJson);
+      const apiResponse = await axios.post("https://bajajrba.vercel.app/process", parsedJson);
       setResponse(apiResponse.data.data);
       console.log(apiResponse);
       setError("");
